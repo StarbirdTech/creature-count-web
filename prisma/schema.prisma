@@ -7,3 +7,26 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model BirdSpecies {
+    id              Int     @id @default(autoincrement())
+    commonName      String
+    scientificName  String?
+    birdCounts      BirdCount[]
+}
+
+model Observation {
+    id              Int         @id @default(autoincrement())
+    observationTime DateTime
+    location        String?
+    birdCounts      BirdCount[]
+}
+
+model BirdCount {
+    id             Int          @id @default(autoincrement())
+    count          Int
+    speciesId      Int
+    observationId  Int
+    birdSpecies    BirdSpecies  @relation(fields: [speciesId], references: [id])
+    observation    Observation  @relation(fields: [observationId], references: [id])
+}
