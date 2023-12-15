@@ -9,6 +9,8 @@
 
 	const data = [
 		{ bird: 'Greater Prairie Chicken', value1966: -4.5, value2015: 2.5 },
+		{ bird: 'Chicken', value1966: -4.5, value2015: 2.5 },
+		{ bird: 'Greater Prairie Chicken', value1966: -4.5, value2015: 2.5 },
 		{ bird: "Henslow's Sparrow", value1966: -2, value2015: 3 }
 		// ... other birds
 	];
