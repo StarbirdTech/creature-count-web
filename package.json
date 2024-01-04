@@ -35,8 +35,12 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@mux/mux-player": "^2.3.1",
+		"@mux/mux-video": "^0.17.2",
 		"@prisma/client": "5.7.0",
 		"@types/d3": "^7.4.3",
+		"@vime/core": "^5.4.1",
+		"@vime/svelte": "^5.4.1",
 		"bits-ui": "^0.11.7",
 		"clsx": "^2.0.0",
 		"d3": "^7.8.5",

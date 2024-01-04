@@ -17,7 +17,9 @@
 				>
 			</a>
 			<nav class="flex items-center space-x-6 text-sm font-medium">
-				<a href="." class="transition-colors hover:text-foreground/80 text-foreground/60">test</a>
+				<a href="./camera" class="transition-colors hover:text-foreground/80 text-foreground/60"
+					>Cameras</a
+				>
 			</nav>
 		</div>
 		<div class="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">

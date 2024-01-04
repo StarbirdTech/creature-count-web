@@ -14,7 +14,10 @@
 	<Card.Root class="col-span-3">
 		<Card.Header>
 			<Card.Title>Species Population</Card.Title>
-			<Card.Description>This chart shows the official population of several different bird species. Use the dropdown menu to select which species to show.</Card.Description>
+			<Card.Description
+				>This chart shows the official population of several different bird species. Use the
+				dropdown menu to select which species to show.</Card.Description
+			>
 		</Card.Header>
 		<Card.Content><BarChart /></Card.Content>
 		<Card.Footer>Foot</Card.Footer>

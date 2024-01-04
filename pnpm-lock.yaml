@@ -5,12 +5,24 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@mux/mux-player':
+    specifier: ^2.3.1
+    version: 2.3.1
+  '@mux/mux-video':
+    specifier: ^0.17.2
+    version: 0.17.2
   '@prisma/client':
     specifier: 5.7.0
     version: 5.7.0(prisma@5.7.0)
   '@types/d3':
     specifier: ^7.4.3
     version: 7.4.3
+  '@vime/core':
+    specifier: ^5.4.1
+    version: 5.4.1
+  '@vime/svelte':
+    specifier: ^5.4.1
+    version: 5.4.1(@vime/core@5.4.1)(svelte@4.2.8)
   bits-ui:
     specifier: ^0.11.7
     version: 0.11.7(svelte@4.2.8)
@@ -452,6 +464,30 @@ packages:
       svelte: 4.2.8
     dev: false
 
+  /@mux/mux-player@2.3.1:
+    resolution: {integrity: sha512-yRR7Ec5LVJdmd431dQM7Lf6r9FdFQOXBBVADiv6HWdj+b+6duAinHA8w+Gfvibokc26l4YO7cQ27hWu29cGGUg==}
+    dependencies:
+      '@mux/mux-video': 0.17.2
+      '@mux/playback-core': 0.22.1
+      media-chrome: 2.0.1
+    dev: false
+
+  /@mux/mux-video@0.17.2:
+    resolution: {integrity: sha512-IIGZhUYPClUIOQ/VZZ7kjYcxTcSSSvm+yiv/+c4hHlreO1XLly8Oe1Dzq2xx12t1b+UUupIzx2Cnc8bzVEQTKA==}
+    dependencies:
+      '@mux/playback-core': 0.22.1
+      castable-video: 1.0.6
+      custom-media-element: 1.2.2
+      media-tracks: 0.3.0
+    dev: false
+
+  /@mux/playback-core@0.22.1:
+    resolution: {integrity: sha512-tsPMpcu/xYHQtO6USZwg80CDaXyc7UbyJGoqMU9P1o0e15X/KDcz179nhr6k0CXafg/yiwAlxPNGXnpwToWJ4w==}
+    dependencies:
+      hls.js: 1.4.14
+      mux-embed: 4.30.0
+    dev: false
+
   /@neoconfetti/svelte@1.0.0:
     resolution: {integrity: sha512-SmksyaJAdSlMa9cTidVSIqYo1qti+WTsviNDwgjNVm+KQ3DRP2Df9umDIzC4vCcpEYY+chQe0i2IKnLw03AT8Q==}
     dev: true
@@ -521,6 +557,12 @@ packages:
     resolution: {integrity: sha512-ZeV/Op4bZsWXuw5Tg05WwRI8BlKiRFhsixPcAM+5BKYSiUZiMKIi713tfT3drBq8+T0E1arNZgYSA9QYcglWNA==}
     dependencies:
       '@prisma/debug': 5.7.0
+    dev: false
+
+  /@stencil/core@2.5.2:
+    resolution: {integrity: sha512-bgjPXkSzzg1WnTgVUm6m5ZzpKt602WmA/QljODAW1xVN40OHJdbGblzF/F6MFzqv2c5Cy30CB41arc8qADIdcQ==}
+    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
+    hasBin: true
     dev: false
 
   /@sveltejs/adapter-auto@2.1.1(@sveltejs/kit@1.28.0):
@@ -788,6 +830,10 @@ packages:
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
+  /@types/fscreen@1.0.4:
+    resolution: {integrity: sha512-TsjxyAUvlvuQyao9vNk0yES4nY07K9xoAbkhgXU948JG39EqlLxniWuW9OiZde9Q8ACSpu3fmbXXRAfb/l/HqQ==}
+    dev: false
+
   /@types/geojson@7946.0.13:
     resolution: {integrity: sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ==}
     dev: false
@@ -939,6 +985,27 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
+  /@vime/core@5.4.1:
+    resolution: {integrity: sha512-ZFpV3xqZJ5tvh5rZOYKRh8zFzNIKr2ZcK6L75nJjFjbWt/ZmFF2nMBxtD9/hC4Xjk9v7hp1+P9cmctL674VFgA==}
+    dependencies:
+      '@stencil/core': 2.5.2
+      '@types/fscreen': 1.0.4
+      fscreen: 1.2.0
+      mitt: 3.0.1
+      stencil-wormhole: 3.4.1
+    dev: false
+
+  /@vime/svelte@5.4.1(@vime/core@5.4.1)(svelte@4.2.8):
+    resolution: {integrity: sha512-I0wnPpfkGIsx8149z32nAVBZ2YTjLTLrpnTFNs+6yV07ynvgEDvfTQEa3F6cx4XDerDROBk3nkpB6W6dtdt52Q==}
+    requiresBuild: true
+    peerDependencies:
+      '@vime/core': 5.4.1
+      svelte: ^3.0.0 || ^4.0.0
+    dependencies:
+      '@vime/core': 5.4.1
+      svelte: 4.2.8
+    dev: false
+
   /acorn-jsx@5.3.2(acorn@8.11.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1079,6 +1146,12 @@ packages:
     resolution: {integrity: sha512-vSUkH84HontZJ88MiNrOau1EBrCqEQYgkC5gIySiDlpsm8sGVrhU7Kx4V6h0tnqaHzIHZv08HlJIwPbL4XL9+A==}
     dev: true
 
+  /castable-video@1.0.6:
+    resolution: {integrity: sha512-Ykw2uL4ZQnqX0j9KF9ksbDpyc8I53mFMswCKW9yV5TrwpWkdNqRHLlcU85W30BIw61fgDjgm0Xh5G0rbcmv23g==}
+    dependencies:
+      custom-media-element: 1.2.2
+    dev: false
+
   /chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
@@ -1163,6 +1236,10 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+
+  /custom-media-element@1.2.2:
+    resolution: {integrity: sha512-tI+NjVRS485QlSxHeM3JIjdEZSJMLOZVp41/vvWukDmIkZSoYG9gLYl9GFZGBpY42UbRVo1eMlF7XkI/IiDHzQ==}
+    dev: false
 
   /d3-array@3.2.4:
     resolution: {integrity: sha512-tdQAmyA18i4J7wprpYq8ClcxZy3SC31QMeByyCFyRt7BVHdREQZ5lpzoe5mFEYZUWe+oq8HBvk9JjpibyEV4Jg==}
@@ -1743,6 +1820,10 @@ packages:
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
+  /fscreen@1.2.0:
+    resolution: {integrity: sha512-hlq4+BU0hlPmwsFjwGGzZ+OZ9N/wq9Ljg/sq3pX+2CD7hrJsX9tJgWWK/wiNTFM212CLHWhicOoqwXyZGGetJg==}
+    dev: false
+
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -1831,6 +1912,10 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
+
+  /hls.js@1.4.14:
+    resolution: {integrity: sha512-UppQjyvPVclg+6t2KY/Rv03h0+bA5u6zwqVoz4LAC/L0fgYmIaCD7ZCrwe8WI1Gv01be1XL0QFsRbSdIHV/Wbw==}
+    dev: false
 
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
@@ -2016,6 +2101,14 @@ packages:
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
 
+  /media-chrome@2.0.1:
+    resolution: {integrity: sha512-6hoC5OY993t4o/YKYXn7YoWUAKG1UFAhnDXNN6kRRa5mnuL+Cwct/2Md16S4jjmTSmN5XjhEWwfCVM5NLHavOA==}
+    dev: false
+
+  /media-tracks@0.3.0:
+    resolution: {integrity: sha512-kicD8eOFwe6nD7jn7iM/0yuLzWuo6abWHURYwY7NhxL1dBif+lt0on4rLTs6VhKwAEE/BjT3wr+0vn1w8SBpag==}
+    dev: false
+
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -2040,6 +2133,10 @@ packages:
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
+
+  /mitt@3.0.1:
+    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
+    dev: false
 
   /mkdirp@0.5.6:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
@@ -2069,6 +2166,10 @@ packages:
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
+
+  /mux-embed@4.30.0:
+    resolution: {integrity: sha512-XAgAp4CEvsiZL26GbruzeG1g33OWyrzuskDMavXUxDufTxS0/AxAhwoTTRqEzEJS9vnZa/X9R2GV3xRX1XMp2w==}
+    dev: false
 
   /mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
@@ -2520,6 +2621,10 @@ packages:
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
+
+  /stencil-wormhole@3.4.1:
+    resolution: {integrity: sha512-ppYTcWTJnIl4ZAKwF39LTA9f/ypHfbVefsHdN2hpMQGrR57wt1TieZo9tlCM/r1Y4SFiZ5yz/cjho564C921Xw==}
+    dev: false
 
   /strip-ansi@6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
