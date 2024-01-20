@@ -17,8 +17,8 @@
 				>
 			</a>
 			<nav class="flex items-center space-x-6 text-sm font-medium">
-				<a href="./camera" class="transition-colors hover:text-foreground/80 text-foreground/60"
-					>Cameras</a
+				<a href="." class="transition-colors hover:text-foreground/80 text-foreground/60"
+					>placeholder</a
 				>
 			</nav>
 		</div>
